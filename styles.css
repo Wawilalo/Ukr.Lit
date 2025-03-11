@@ -1,0 +1,156 @@
+/* Base styles for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #ff5e3a, #ff6549, #ff9047, #ff8d4b, #f1fc62, #fdff74, #42ffd6);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+    color: #000000;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.5s ease;
+    overflow-x: hidden;
+}
+
+/* Keyframes for background animation */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Middle border styling */
+.middle-border {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 2px;
+    background-color: #000;
+}
+
+/* Common styles for sections */
+.start, .menu, .my, .text, .text2, .text3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70.33vh;
+    width: 90%;
+    font-size: 2rem; /* Use rem for font size */
+    line-height: 1.5;
+    margin-bottom: 1.25rem; /* Use rem for margin */
+    padding: 1.25rem; /* Use rem for padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    margin-right: auto;
+    margin-left: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effects for sections */
+.start:hover, .menu:hover, .my:hover, .text:hover, .text2:hover, .text3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Text styling */
+.text, .text2, .text3 {
+    font-size: 1.25rem; /* Use rem for font size */
+    line-height: 1.5;
+    margin-bottom: 1.25rem; /* Use rem for margin */
+    color: #333;
+    font-weight: 300;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #000000, #423d3c, #887a75);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border: 2px solid #333;
+    border-left: none;
+    border-right: none;
+    padding: 0.625rem; /* Use rem for padding */
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effects for text */
+.text:hover, .text2:hover, .text3:hover {
+    color: #000;
+    border-color: #000;
+    border-left: none;
+    border-right: none;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1.25rem; /* Use rem for padding */
+}
+
+/* Header styling */
+.header {
+    font-size: 2.5rem; /* Use rem for font size */
+    font-weight: bold;
+    margin-bottom: 1.25rem; /* Use rem for margin */
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer styling */
+.footer {
+    font-size: 1rem; /* Use rem for font size */
+    color: #fff;
+    margin-top: 1.25rem; /* Use rem for margin */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .start, .menu, .my, .text, .text2, .text3 {
+        height: auto;
+        font-size: 1.5rem;
+        padding: 0.625rem; /* Use rem for padding */
+    }
+
+    .header {
+        font-size: 2rem;
+    }
+
+    .footer {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .start, .menu, .my, .text, .text2, .text3 {
+        font-size: 1rem;
+        padding: 0.3125rem; /* Use rem for padding */
+    }
+
+    .header {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        font-size: 0.75rem;
+    }
+}
